@@ -3,10 +3,12 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:ocd/view/widgets/auth_widgets/defalt_buttom.dart';
+import 'package:ocd/routes/routes.dart';
+import 'package:ocd/view/widgets/default_Buttom/defalt_buttom.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../../../../utils/constrants/colors/colors.dart';
+import '../../../../../utils/constrants/colors/colors.dart';
+import '../../../../widgets/default_app_bar/default_app_bar.dart';
 
 class ForgotPasswordVerifyEmailScreen extends StatefulWidget {
   ForgotPasswordVerifyEmailScreen({Key? key}) : super(key: key);
@@ -39,32 +41,14 @@ class _ForgotPasswordVerifyEmailScreenState
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Padding(
-            padding: EdgeInsets.only(top: 22.0),
-            child: Text(
-              "Verify Your Email",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-                color: BLACKTEXT,
-                decoration: TextDecoration.none,
-              ),
-            ),
-          ),
-          leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: const Padding(
-              padding: EdgeInsets.all(22.0),
-              child: Icon(
-                Icons.arrow_back,
-                color: BLACKTEXT,
-                size: 24,
-              ),
-            ),
-          ),
+        appBar: DefaultAppBar(
+          title: "Froget Password",
+          titleColor: BLACKTEXT,
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icons.arrow_back,
+          iconColor: BLACKTEXT,
         ),
         body: SingleChildScrollView(
           child: Center(
@@ -163,7 +147,9 @@ class _ForgotPasswordVerifyEmailScreenState
                     height: 30,
                   ),
                   DefaultButtom(
-                    onpressed: () {},
+                    onpressed: () {
+                      Get.toNamed(Routes.forgotPasswordCreateNewPasswordScreen);
+                    },
                     width: 350,
                     height: 50,
                     textColor: APPBACKGROUND,

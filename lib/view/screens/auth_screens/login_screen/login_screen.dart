@@ -4,20 +4,17 @@ import 'package:get/get.dart';
 import 'package:ocd/logic/controllers/auth_controller/auth_controller.dart';
 import 'package:ocd/utils/constrants/colors/colors.dart';
 import 'package:ocd/utils/constrants/my_string.dart';
+import 'package:ocd/view/widgets/auth_widgets/align_image_corner_down.dart';
+import 'package:ocd/view/widgets/auth_widgets/auth_text_form_field.dart';
 import 'package:ocd/view/widgets/auth_widgets/container_under.dart';
+import 'package:ocd/view/widgets/default_Buttom/defalt_buttom.dart';
 
-import '../../../routes/routes.dart';
-import '../../widgets/auth_widgets/auth_text_form_field.dart';
-import '../../widgets/auth_widgets/check_widget.dart';
-import '../../widgets/auth_widgets/defalt_buttom.dart';
+import '../../../../routes/routes.dart';
 
-class SignUpScreen extends StatelessWidget {
-  SignUpScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatelessWidget {
+  LoginScreen({Key? key}) : super(key: key);
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController phoneController = TextEditingController();
-  final TextEditingController addressController = TextEditingController();
   final controller = Get.find<AuthController>();
   final fromKey = GlobalKey<FormState>();
 
@@ -34,22 +31,35 @@ class SignUpScreen extends StatelessWidget {
               Container(
                   alignment: Alignment.topRight,
                   child: Stack(children: [
-                    SvgPicture.asset('assets/images/background_login.svg'),
+                    SvgPicture.asset(
+                      'assets/images/background_login.svg',
+                    ),
                     Container(
                         child:
                             SvgPicture.asset('assets/images/back_login2.svg'),
                         margin: EdgeInsets.only(bottom: 5),
                         padding: EdgeInsets.only(left: 15)),
                   ])),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
+              Container(
+                padding: EdgeInsets.all(20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: SvgPicture.asset(
+                        'assets/images/logo_partion.svg',
+                        // width: 81.17,
+                        // height: 42.12,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
                     Row(
                       children: const [
                         Text(
-                          "Hello, ",
+                          "Welcome ",
                           style: TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.w700,
@@ -58,7 +68,7 @@ class SignUpScreen extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "Friend!",
+                          "Back!",
                           style: TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.w700,
@@ -74,7 +84,7 @@ class SignUpScreen extends StatelessWidget {
                     Container(
                       alignment: Alignment.topLeft,
                       child: const Text(
-                        "Sign Up",
+                        "Login",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
@@ -87,37 +97,11 @@ class SignUpScreen extends StatelessWidget {
                       height: 30,
                     ),
                     AuthTextFromField(
-                      controller: nameController,
-                      hintText: 'Full Name',
-                      obscureText: false,
-                      type: TextInputType.name,
-                      prefixIcon: ImageIcon(
-                        AssetImage("assets/icons/user 1.png"),
-                        color: HINTTEXTFORMFIELD,
-                        size: 24,
-                      ),
-                      validator: (value) {
-                        if (!RegExp(validationName).hasMatch(value)) {
-                          return 'Invalid Name';
-                        } else {
-                          return null;
-                        }
-                      },
-                      suffixIcon: const Text(""),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    AuthTextFromField(
                       controller: emailController,
                       hintText: 'E-mail',
+                      padding: 18,
                       type: TextInputType.emailAddress,
                       obscureText: false,
-                      prefixIcon: const ImageIcon(
-                        AssetImage("assets/icons/envelope 1.png"),
-                        color: HINTTEXTFORMFIELD,
-                        size: 24,
-                      ),
                       validator: (value) {
                         if (!RegExp(validationEmail).hasMatch(value)) {
                           return 'Invalid email';
@@ -135,6 +119,7 @@ class SignUpScreen extends StatelessWidget {
                         controller: passwordController,
                         obscureText: controller.isVisibilty ? false : true,
                         type: TextInputType.visiblePassword,
+                        padding: 18,
                         validator: (value) {
                           if (value.toString().length < 6) {
                             return 'Password should be longer or equal to 6 characters';
@@ -142,11 +127,6 @@ class SignUpScreen extends StatelessWidget {
                             return null;
                           }
                         },
-                        prefixIcon: const ImageIcon(
-                          AssetImage("assets/icons/lock 1.png"),
-                          color: HINTTEXTFORMFIELD,
-                          size: 24,
-                        ),
                         hintText: 'Password',
                         suffixIcon: IconButton(
                           onPressed: () {
@@ -164,94 +144,53 @@ class SignUpScreen extends StatelessWidget {
                         ),
                       );
                     }),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    AuthTextFromField(
-                      controller: phoneController,
-                      hintText: 'Phone number',
-                      type: TextInputType.phone,
-                      obscureText: false,
-                      prefixIcon: const ImageIcon(
-                        AssetImage("assets/icons/phone.png"),
-                        color: HINTTEXTFORMFIELD,
-                        size: 24,
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        onPressed: () {
+                          Get.toNamed(Routes.forgotPasswordSendEmailScreen);
+                        },
+                        child: const Text(
+                          "Forget Password?",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                            color: MAINCOLOR,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
                       ),
-                      validator: (value) {
-                        if (!RegExp(validationPhone).hasMatch(value)) {
-                          return 'Invalid Phone number';
-                        } else {
-                          return null;
-                        }
-                      },
-                      suffixIcon: const Text(""),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    AuthTextFromField(
-                      controller: addressController,
-                      hintText: 'Address',
-                      obscureText: false,
-                      type: TextInputType.text,
-                      prefixIcon: ImageIcon(
-                        AssetImage("assets/icons/map-pin.png"),
-                        color: HINTTEXTFORMFIELD,
-                        size: 24,
-                      ),
-                      validator: (value) {
-                        if (!RegExp(validationName).hasMatch(value)) {
-                          return 'Invalid Address';
-                        } else {
-                          return null;
-                        }
-                      },
-                      suffixIcon: const Text(""),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    CheckWidget(
-                      onPressed: () {
-                        Get.toNamed(Routes.privacyPolicyScreen);
-                      },
                     ),
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              const SizedBox(
+                height: 50,
+              ),
               Center(
                 child: DefaultButtom(
-                  onpressed: () {},
+                  onpressed: () {
+                    Get.toNamed(Routes.mainScreen);
+                  },
+                  textColor: APPBACKGROUND,
                   width: 350,
                   height: 50,
-                  textColor: APPBACKGROUND,
                   borderColor: MAINCOLOR,
                   backgroundColor: MAINCOLOR,
-                  textButtom: 'Sign Up',
+                  textButtom: 'Login',
                 ),
               ),
               ContainerUnder(
-                text: 'Already Have an Account?',
-                textbuttom: 'Login',
+                textbuttom: 'Sign Up',
+                text: 'Don’t Have an Account? ',
                 onPressed: () {
-                  Get.offNamed(Routes.loginScreen);
+                  Get.offNamed(Routes.signUpScreen);
                 },
               ),
-              Container(
-                  alignment: Alignment.bottomLeft,
-                  color: APPBACKGROUND,
-                  child: Stack(children: [
-                    Container(
-                        child: SvgPicture.asset(
-                            'assets/images/Rectangle 2664.svg'),
-                        margin: EdgeInsets.only(top: 20),
-                        padding: EdgeInsets.only(right: 15)),
-                    Container(
-                        child: SvgPicture.asset(
-                            'assets/images/Rectangle 2665.svg'),
-                        margin: EdgeInsets.only(top: 35),
-                        padding: EdgeInsets.only(right: 15)),
-                  ])),
+              const ImageDownConcer(),
             ],
           ),
         ),

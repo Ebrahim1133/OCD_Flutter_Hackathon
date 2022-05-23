@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 5), () {
       isviewed != 0
           ? Get.offNamed(Routes.onboardScreen1)
-          : Get.offNamed(Routes.loginScreen);
+          : Get.offNamed(Routes.signUpScreen);
     });
   }
 

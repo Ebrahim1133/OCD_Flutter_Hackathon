@@ -37,15 +37,18 @@ class ContainerUnder extends StatelessWidget {
               decoration: TextDecoration.none,
             ),
           ),
-          TextButton(
-            onPressed: onPressed,
-            child: Text(
-              textbuttom,
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
-                color: MAINCOLOR,
-                decoration: TextDecoration.underline,
+          Padding(
+            padding: EdgeInsets.zero,
+            child: TextButton(
+              onPressed: onPressed,
+              child: Text(
+                textbuttom,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                  color: MAINCOLOR,
+                  decoration: TextDecoration.underline,
+                ),
               ),
             ),
           ),

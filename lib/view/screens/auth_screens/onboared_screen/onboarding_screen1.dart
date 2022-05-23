@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:ocd/logic/controllers/onboarding_controller/onboarding_controller.dart';
 import 'package:ocd/routes/routes.dart';
 import 'package:ocd/utils/constrants/colors/colors.dart';
-import 'package:ocd/view/widgets/auth_widgets/defalt_buttom.dart';
+import 'package:ocd/view/widgets/default_Buttom/defalt_buttom.dart';
 
 class OnBoaredScreen1 extends StatelessWidget {
   OnBoaredScreen1({Key? key}) : super(key: key);

@@ -5,16 +5,18 @@ class AuthTextFromField extends StatelessWidget {
   final TextEditingController controller;
   final bool obscureText;
   final Function validator;
-  final Widget prefixIcon;
-  final Widget suffixIcon;
+  Widget? prefixIcon;
+  Widget? suffixIcon;
   final String hintText;
   final TextInputType type;
-  const AuthTextFromField({
+  double? padding;
+  AuthTextFromField({
     required this.controller,
     required this.obscureText,
     required this.validator,
-    required this.prefixIcon,
-    required this.suffixIcon,
+    this.prefixIcon,
+    this.suffixIcon,
+    this.padding = 0,
     required this.hintText,
     required this.type,
     Key? key,
@@ -35,6 +37,7 @@ class AuthTextFromField extends StatelessWidget {
         fillColor: TEXTFIELDCOLOR,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
+        contentPadding: EdgeInsets.all(padding!),
         hintText: hintText,
         hintStyle: const TextStyle(
           color: HINTTEXTFORMFIELD,

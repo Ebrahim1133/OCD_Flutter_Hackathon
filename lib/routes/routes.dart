@@ -1,15 +1,17 @@
 import 'package:get/get.dart';
 import 'package:ocd/logic/bindings/auth_binding/auth_biniding.dart';
+import 'package:ocd/logic/bindings/nav_bar_binding/nav_bar_binding.dart';
 import 'package:ocd/logic/bindings/onboarding_binding/onboarding_binding.dart';
-import 'package:ocd/view/screens/forgot_password_screens/forgot_password_create_new_password_screen/forgot_password_create_new_password_screen.dart';
-import 'package:ocd/view/screens/forgot_password_screens/forgot_password_send_email_screen/forgot_password_send_email_screen.dart';
-import 'package:ocd/view/screens/forgot_password_screens/forgot_password_verify_email_screen/forgot_password_verify_email_screen.dart';
-import 'package:ocd/view/screens/login_screen/login_screen.dart';
 import 'package:ocd/view/screens/main_screen/main_screen.dart';
-import 'package:ocd/view/screens/onboared_screen/onboarding_screen1.dart';
-import 'package:ocd/view/screens/privacy_policy_screen/privacy_policy_screen.dart';
-import 'package:ocd/view/screens/sign_up_screen/sign_up_screen.dart';
 import 'package:ocd/view/screens/splash_screen/splash_screen.dart';
+
+import '../view/screens/auth_screens/forgot_password_screens/forgot_password_create_new_password_screen/forgot_password_create_new_password_screen.dart';
+import '../view/screens/auth_screens/forgot_password_screens/forgot_password_send_email_screen/forgot_password_send_email_screen.dart';
+import '../view/screens/auth_screens/forgot_password_screens/forgot_password_verify_email_screen/forgot_password_verify_email_screen.dart';
+import '../view/screens/auth_screens/login_screen/login_screen.dart';
+import '../view/screens/auth_screens/onboared_screen/onboarding_screen1.dart';
+import '../view/screens/auth_screens/privacy_policy_screen/privacy_policy_screen.dart';
+import '../view/screens/auth_screens/sign_up_screen/sign_up_screen.dart';
 
 class AppRoutes {
   //initialRoute
@@ -68,10 +70,9 @@ class AppRoutes {
       name: Routes.privacyPolicyScreen,
       page: () => const PrivacyPolicyScreen(),
     ),
-    GetPage(
-      name: Routes.mainScreen,
-      page: () => const MainScreen(),
-    ),
+    GetPage(name: Routes.mainScreen, page: () => MainScreen(), bindings: [
+      NavBarBinding(),
+    ]),
   ];
 }
 
