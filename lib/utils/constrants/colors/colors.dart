@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+
+const Color APPBACKGROUND = Color(0xffffffff);
+const Color TEXTFIELDCOLOR = Color(0xfff8f8f8);
+const Color BLACKTEXT = Color(0xFF000000);
+const Color DESCIPRTION = Color(0xff8f8f8f);
+const Color HINTTEXTFORMFIELD = Color(0xffd0d0d0);
+const Color MAINCOLOR = Color(0xffff6600);
+const Color TEXTFIELDSIGNUP = Color(0xfff8f8f8);
+const Color PARAGRAPH = Color(0xff3a3a3a);
+const Color HEADER = Color(0xff1b1816);
+const Color TEXTFIELDLOGIN = Color(0xffededed);
+const Color PINHINT = Color(0xffa5a5a5);
+const Color APPBAR = Color(0xfffcfcfc);
+const Color TEXTFIELDFORGET = Color(0xff838383);
+const Color HINTTEXT = Color(0xffb7b7b7);
+const Color TEXTFIELDCODE = Color(0xff2b2b2b);
+const Color HINTDESCRIPTION = Color(0xff979797);
+const Color BOTTOMNARBAR = Color(0xfffbfbfb);
+const Color ICONARROW = Color(0x45000000);
+const Color ICONCLOSE = Color(0xFF130F26);
+const Color POPUPTEXT = Color(0xFFFF2121);
+const Color BUTTOMDISABLETEXT = Color(0xFF7D7D7D);
+const Color BUTTOMDISABLE = Color(0xFFB7B7B7);
+const Color HINTPROCESS = Color(0xFFCCCCCC);
+const Color PARAGRAPHCER = Color(0xFF8B8B8B);
