@@ -13,11 +13,23 @@ class PrivacyPolicyScreen extends StatelessWidget {
       child: Scaffold(
         appBar: DefaultAppBar(
           titleColor: BLACKTEXT,
-          onPressed: () {
-            Get.back();
-          },
-          icon: Icons.arrow_back,
-          iconColor: BLACKTEXT,
+          secandicon: Text(
+            "",
+            style: TextStyle(color: APPBAR),
+          ),
+          icon: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: Padding(
+              padding: const EdgeInsets.all(22.0),
+              child: Icon(
+                Icons.arrow_back,
+                size: 24,
+                color: BLACKTEXT,
+              ),
+            ),
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(20.0),

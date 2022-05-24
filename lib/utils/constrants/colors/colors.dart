@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 const Color APPBACKGROUND = Color(0xffffffff);
 const Color TEXTFIELDCOLOR = Color(0xfff8f8f8);
 const Color BLACKTEXT = Color(0xFF000000);
+const Color DATAACTIVE = Color(0xFF8B8B8B);
 const Color DESCIPRTION = Color(0xff8f8f8f);
 const Color HINTTEXTFORMFIELD = Color(0xffd0d0d0);
 const Color MAINCOLOR = Color(0xffff6600);

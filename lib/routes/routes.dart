@@ -1,8 +1,12 @@
 import 'package:get/get.dart';
 import 'package:ocd/logic/bindings/auth_binding/auth_biniding.dart';
-import 'package:ocd/logic/bindings/nav_bar_binding/nav_bar_binding.dart';
+import 'package:ocd/logic/bindings/main_binding/main_binding.dart';
 import 'package:ocd/logic/bindings/onboarding_binding/onboarding_binding.dart';
+import 'package:ocd/view/screens/home_screen/home_screen.dart';
+import 'package:ocd/view/screens/log_out_pop_up_screen/log_out_pop_up_screen.dart';
 import 'package:ocd/view/screens/main_screen/main_screen.dart';
+import 'package:ocd/view/screens/my_courses_screen/my_courses_screen.dart';
+import 'package:ocd/view/screens/profile_screen/profile_screen.dart';
 import 'package:ocd/view/screens/splash_screen/splash_screen.dart';
 
 import '../view/screens/auth_screens/forgot_password_screens/forgot_password_create_new_password_screen/forgot_password_create_new_password_screen.dart';
@@ -28,6 +32,10 @@ class AppRoutes {
   static const forgotPasswordCreateNewPasswordScreen =
       Routes.forgotPasswordCreateNewPasswordScreen;
   static const privacyPolicyScreen = Routes.privacyPolicyScreen;
+  static const homeScreen = Routes.homeScreen;
+  static const myCoursesScreen = Routes.myCoursesScreen;
+  static const profileScreen = Routes.profileScreen;
+  static const logOutPopUpScreen = Routes.logOutPopUpScreen;
 
   //getPages
 
@@ -70,9 +78,21 @@ class AppRoutes {
       name: Routes.privacyPolicyScreen,
       page: () => const PrivacyPolicyScreen(),
     ),
-    GetPage(name: Routes.mainScreen, page: () => MainScreen(), bindings: [
-      NavBarBinding(),
-    ]),
+    GetPage(
+        name: Routes.mainScreen,
+        page: () => MainScreen(),
+        bindings: [MainBininding()]),
+    GetPage(name: Routes.homeScreen, page: () => HomeScreen(), bindings: []),
+    GetPage(
+        name: Routes.myCoursesScreen,
+        page: () => MyCoursesScreen(),
+        bindings: []),
+    GetPage(
+        name: Routes.profileScreen, page: () => ProfileScreen(), bindings: []),
+    GetPage(
+        name: Routes.logOutPopUpScreen,
+        page: () => LogOutPopUpScreen(),
+        bindings: []),
   ];
 }
 
@@ -88,4 +108,8 @@ class Routes {
   static const forgotPasswordCreateNewPasswordScreen =
       '/forgotPasswordCreateNewPasswordScreen';
   static const privacyPolicyScreen = '/privacyPolicyScreen';
+  static const homeScreen = '/homeScreen';
+  static const myCoursesScreen = '/myCoursesScreen';
+  static const profileScreen = '/profileScreen';
+  static const logOutPopUpScreen = '/logOutPopUpScreen';
 }

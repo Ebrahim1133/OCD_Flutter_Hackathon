@@ -1,46 +1,44 @@
 import 'package:flutter/material.dart';
 
 class DefaultAppBar extends StatelessWidget with PreferredSizeWidget {
-  DefaultAppBar(
-      {Key? key,
-      this.title = "",
-      required this.titleColor,
-      required this.onPressed,
-      required this.icon,
-      required this.iconColor})
-      : super(key: key);
+  DefaultAppBar({
+    Key? key,
+    this.title = "",
+    required this.titleColor,
+    required this.icon,
+    this.centerTitle = true,
+    required this.secandicon,
+    this.padding = 22,
+    this.paddingRight = 0,
+    this.titleSpacing = 20,
+  }) : super(key: key);
   String? title;
   final Color titleColor;
-  final Function() onPressed;
-  final IconData icon;
-  final Color iconColor;
+  final Widget icon;
+  final Widget secandicon;
+  bool? centerTitle;
+  double? padding;
+  double? paddingRight;
+  double? titleSpacing;
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Padding(
-        padding: const EdgeInsets.only(top: 22.0),
-        child: Text(
-          title!,
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-            color: titleColor,
-            decoration: TextDecoration.none,
+        title: Padding(
+          padding: EdgeInsets.only(top: padding!, right: paddingRight!),
+          child: Text(
+            title!,
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.w700,
+              color: titleColor,
+              decoration: TextDecoration.none,
+            ),
           ),
         ),
-      ),
-      leading: IconButton(
-        onPressed: onPressed,
-        icon: Padding(
-          padding: const EdgeInsets.all(22.0),
-          child: Icon(
-            icon,
-            color: iconColor,
-            size: 24,
-          ),
-        ),
-      ),
-    );
+        actions: [secandicon],
+        titleSpacing: titleSpacing!,
+        centerTitle: centerTitle!,
+        leading: icon);
   }
 
   @override
