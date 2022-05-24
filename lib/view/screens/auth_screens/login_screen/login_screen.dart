@@ -173,7 +173,7 @@ class LoginScreen extends StatelessWidget {
               Center(
                 child: DefaultButtom(
                   onpressed: () {
-                    Get.toNamed(Routes.mainScreen);
+                    Get.toNamed(Routes.hrInterviewScreen);
                   },
                   textColor: APPBACKGROUND,
                   width: 350,

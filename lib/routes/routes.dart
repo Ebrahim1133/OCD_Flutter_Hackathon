@@ -1,8 +1,11 @@
 import 'package:get/get.dart';
 import 'package:ocd/logic/bindings/auth_binding/auth_biniding.dart';
+import 'package:ocd/logic/bindings/interview_binding/interview_binding.dart';
 import 'package:ocd/logic/bindings/main_binding/main_binding.dart';
 import 'package:ocd/logic/bindings/onboarding_binding/onboarding_binding.dart';
+import 'package:ocd/view/screens/course_fails_screen/course_fails_screen.dart';
 import 'package:ocd/view/screens/home_screen/home_screen.dart';
+import 'package:ocd/view/screens/interview_screens/hr_interview_screen/hr_interview_screen.dart';
 import 'package:ocd/view/screens/log_out_pop_up_screen/log_out_pop_up_screen.dart';
 import 'package:ocd/view/screens/main_screen/main_screen.dart';
 import 'package:ocd/view/screens/my_courses_screen/my_courses_screen.dart';
@@ -16,6 +19,7 @@ import '../view/screens/auth_screens/login_screen/login_screen.dart';
 import '../view/screens/auth_screens/onboared_screen/onboarding_screen1.dart';
 import '../view/screens/auth_screens/privacy_policy_screen/privacy_policy_screen.dart';
 import '../view/screens/auth_screens/sign_up_screen/sign_up_screen.dart';
+import '../view/screens/course_screen_after_complete_course_registration/course_screen_after_complete_course_registration.dart';
 
 class AppRoutes {
   //initialRoute
@@ -36,6 +40,10 @@ class AppRoutes {
   static const myCoursesScreen = Routes.myCoursesScreen;
   static const profileScreen = Routes.profileScreen;
   static const logOutPopUpScreen = Routes.logOutPopUpScreen;
+  static const hrInterviewScreen = Routes.hrInterviewScreen;
+  static const courseScreenAfterCompleteCourseRegistration =
+      Routes.courseScreenAfterCompleteCourseRegistration;
+  static const courseFailsScreen = Routes.courseFailsScreen;
 
   //getPages
 
@@ -93,6 +101,24 @@ class AppRoutes {
         name: Routes.logOutPopUpScreen,
         page: () => LogOutPopUpScreen(),
         bindings: []),
+    GetPage(
+      name: Routes.hrInterviewScreen,
+      page: () => HrInterviewScreen(),
+      bindings: [InterviewBinding()],
+    ),
+    GetPage(
+      name: Routes.hrInterviewScreen,
+      page: () => HrInterviewScreen(),
+      bindings: [InterviewBinding()],
+    ),
+    GetPage(
+      name: Routes.courseScreenAfterCompleteCourseRegistration,
+      page: () => CourseScreenAfterCompleteCourseRegistration(),
+    ),
+    GetPage(
+      name: Routes.courseFailsScreen,
+      page: () => CourseFailsScreen(),
+    ),
   ];
 }
 
@@ -112,4 +138,8 @@ class Routes {
   static const myCoursesScreen = '/myCoursesScreen';
   static const profileScreen = '/profileScreen';
   static const logOutPopUpScreen = '/logOutPopUpScreen';
+  static const hrInterviewScreen = '/hrInterviewScreen';
+  static const courseScreenAfterCompleteCourseRegistration =
+      '/courseScreenAfterCompleteCourseRegistration';
+  static const courseFailsScreen = '/courseFailsScreen';
 }
