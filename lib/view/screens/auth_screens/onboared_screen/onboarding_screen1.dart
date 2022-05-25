@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:ocd/logic/controllers/onboarding_controller/onboarding_controller.dart';
+import 'package:ocd/controllers/onboarding_controller/onboarding_controller.dart';
 import 'package:ocd/routes/routes.dart';
 import 'package:ocd/utils/constrants/colors/colors.dart';
 import 'package:ocd/view/widgets/default_Buttom/defalt_buttom.dart';
@@ -94,7 +94,7 @@ class OnBoaredScreen1 extends StatelessWidget {
                       );
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 25,
                   ),
                   GetBuilder<OnBoardingController>(

@@ -6,7 +6,7 @@ import 'package:ocd/utils/constrants/colors/colors.dart';
 import 'package:ocd/view/widgets/auth_widgets/auth_text_form_field.dart';
 import 'package:ocd/view/widgets/default_Buttom/defalt_buttom.dart';
 
-import '../../../../../utils/constrants/my_string.dart';
+import '../../../../../utils/constrants/validation_patterns/my_string.dart';
 import '../../../../widgets/default_app_bar/default_app_bar.dart';
 
 class ForgotPasswordSendEmailScreen extends StatelessWidget {
@@ -19,9 +19,9 @@ class ForgotPasswordSendEmailScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: DefaultAppBar(
-          title: "Verify Your Email",
+          title: "Froget Password",
           titleColor: BLACKTEXT,
-          secandicon: Text(
+          secandicon: const Text(
             "",
             style: TextStyle(color: APPBAR),
           ),
@@ -29,8 +29,8 @@ class ForgotPasswordSendEmailScreen extends StatelessWidget {
             onPressed: () {
               Get.back();
             },
-            icon: Padding(
-              padding: const EdgeInsets.all(22.0),
+            icon: const Padding(
+              padding: EdgeInsets.all(22.0),
               child: Icon(
                 Icons.arrow_back,
                 size: 24,

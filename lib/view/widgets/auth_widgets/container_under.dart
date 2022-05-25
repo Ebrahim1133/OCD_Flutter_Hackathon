@@ -18,7 +18,7 @@ class ContainerUnder extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 100,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: APPBACKGROUND,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
@@ -30,7 +30,7 @@ class ContainerUnder extends StatelessWidget {
         children: [
           Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
               color: BLACKTEXT,
@@ -43,7 +43,7 @@ class ContainerUnder extends StatelessWidget {
               onPressed: onPressed,
               child: Text(
                 textbuttom,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                   color: MAINCOLOR,

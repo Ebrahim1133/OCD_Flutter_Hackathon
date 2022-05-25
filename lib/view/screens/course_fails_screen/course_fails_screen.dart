@@ -15,49 +15,53 @@ class CourseFailsScreen extends StatelessWidget {
         appBar: DefaultAppBar(
           title: "Result",
           titleColor: BLACKTEXT,
-          secandicon: Text(
+          secandicon: const Text(
             "",
             style: TextStyle(color: APPBAR),
           ),
           titleSpacing: -30,
-          icon: Icon(
+          icon: const Icon(
             Icons.android,
           ),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SvgPicture.asset("assets/images/good_luck.svg",
-                width: 282.3, height: 242.07),
-            const SizedBox(height: 45),
-            Text(
-              "Lorem ipsum dolor",
-              style: const TextStyle(
-                  fontSize: 24, fontWeight: FontWeight.bold, color: BLACKTEXT),
-            ),
-            const SizedBox(height: 30),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32.0),
-              child: Text(
-                "Lorem ipsum dolor sit amet, "
-                "consectetur adipiscing elit, sed do",
-                style: const TextStyle(fontSize: 13, color: DESCIPRTION),
-                textAlign: TextAlign.center,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset("assets/images/good_luck.svg",
+                  width: 282.3, height: 242.07),
+              const SizedBox(height: 30),
+              const Text(
+                "Lorem ipsum dolor",
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: BLACKTEXT),
               ),
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            DefaultButtom(
-              textButtom: 'Back to Home',
-              width: 250,
-              height: 50,
-              backgroundColor: APPBACKGROUND,
-              borderColor: MAINCOLOR,
-              textColor: MAINCOLOR,
-              onpressed: () {},
-            ),
-          ],
+              const SizedBox(height: 30),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 32.0),
+                child: Text(
+                  "Lorem ipsum dolor sit amet,\n "
+                  "consectetur adipiscing elit, sed do",
+                  style: TextStyle(fontSize: 13, color: DESCIPRTION),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              DefaultButtom(
+                textButtom: 'Back to Home',
+                width: 250,
+                height: 50,
+                backgroundColor: APPBACKGROUND,
+                borderColor: MAINCOLOR,
+                textColor: MAINCOLOR,
+                onpressed: () {},
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     GetStorage onboared = GetStorage();
     isviewed = onboared.read('onboard');
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 3), () {
       isviewed != 0
           ? Get.offNamed(Routes.onboardScreen1)
           : Get.offNamed(Routes.signUpScreen);

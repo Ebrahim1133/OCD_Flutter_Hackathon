@@ -11,7 +11,7 @@ import '../../../../../utils/constrants/colors/colors.dart';
 import '../../../../widgets/default_app_bar/default_app_bar.dart';
 
 class ForgotPasswordVerifyEmailScreen extends StatefulWidget {
-  ForgotPasswordVerifyEmailScreen({Key? key}) : super(key: key);
+  const ForgotPasswordVerifyEmailScreen({Key? key}) : super(key: key);
 
   @override
   State<ForgotPasswordVerifyEmailScreen> createState() =>
@@ -42,9 +42,9 @@ class _ForgotPasswordVerifyEmailScreenState
     return SafeArea(
       child: Scaffold(
         appBar: DefaultAppBar(
-          title: "Froget Password",
+          title: "Verify Your Email",
           titleColor: BLACKTEXT,
-          secandicon: Text(
+          secandicon: const Text(
             "",
             style: TextStyle(color: APPBAR),
           ),
@@ -52,8 +52,8 @@ class _ForgotPasswordVerifyEmailScreenState
             onPressed: () {
               Get.back();
             },
-            icon: Padding(
-              padding: const EdgeInsets.all(22.0),
+            icon: const Padding(
+              padding: EdgeInsets.all(22.0),
               child: Icon(
                 Icons.arrow_back,
                 size: 24,
@@ -119,14 +119,14 @@ class _ForgotPasswordVerifyEmailScreenState
                       fieldWidth: 40,
                       activeFillColor: TEXTFIELDLOGIN,
                     ),
-                    animationDuration: Duration(milliseconds: 300),
+                    animationDuration: const Duration(milliseconds: 300),
                     backgroundColor: APPBACKGROUND,
                     cursorColor: MAINCOLOR,
                     enabled: true,
                     enablePinAutofill: true,
                     showCursor: true,
                     hintCharacter: '_',
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                         color: TEXTFIELDLOGIN,
                         decoration: TextDecoration.underline,
                         decorationColor: PINHINT),
@@ -141,16 +141,13 @@ class _ForgotPasswordVerifyEmailScreenState
                     enableActiveFill: true,
                     errorAnimationController: errorController,
                     controller: pinController,
-                    onCompleted: (v) {
-                      print("Completed");
-                    },
+                    onCompleted: (v) {},
                     onChanged: (value) {
                       setState(() {
                         currentText = value;
                       });
                     },
                     beforeTextPaste: (text) {
-                      print("Allowing to paste $text");
                       return true;
                     },
                     appContext: context,
@@ -167,7 +164,7 @@ class _ForgotPasswordVerifyEmailScreenState
                     textColor: APPBACKGROUND,
                     borderColor: MAINCOLOR,
                     backgroundColor: MAINCOLOR,
-                    textButtom: 'Send',
+                    textButtom: 'Verify',
                   ),
                 ],
               ),

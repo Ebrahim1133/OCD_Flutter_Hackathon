@@ -7,7 +7,10 @@ import '../../../view/screens/profile_screen/profile_screen.dart';
 class MainController extends GetxController {
   RxInt currentIndex = 0.obs;
 
+  /// list of tabs screens using to Navgiate to 3 screen in bottomNavBar
   var tabs = [HomeScreen(), MyCoursesScreen(), ProfileScreen()].obs;
+
+  /// list of titles Appbars of main screens (homeScreen - MyCoursesScreen - MyProfileScreen)
   var title = [
     "",
     "My Courses",

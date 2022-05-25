@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:ocd/logic/controllers/interview_controller/InterviewController.dart';
+import 'package:ocd/controllers/interview_controller/InterviewController.dart';
 
 class InterviewBinding extends Bindings {
   @override

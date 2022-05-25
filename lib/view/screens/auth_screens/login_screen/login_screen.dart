@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:ocd/logic/controllers/auth_controller/auth_controller.dart';
+import 'package:ocd/controllers/auth_controller/auth_controller.dart';
 import 'package:ocd/utils/constrants/colors/colors.dart';
-import 'package:ocd/utils/constrants/my_string.dart';
+import 'package:ocd/utils/constrants/validation_patterns/my_string.dart';
 import 'package:ocd/view/widgets/auth_widgets/align_image_corner_down.dart';
 import 'package:ocd/view/widgets/auth_widgets/auth_text_form_field.dart';
 import 'package:ocd/view/widgets/auth_widgets/container_under.dart';
@@ -37,11 +37,11 @@ class LoginScreen extends StatelessWidget {
                     Container(
                         child:
                             SvgPicture.asset('assets/images/back_login2.svg'),
-                        margin: EdgeInsets.only(bottom: 5),
-                        padding: EdgeInsets.only(left: 15)),
+                        margin: const EdgeInsets.only(bottom: 5),
+                        padding: const EdgeInsets.only(left: 15)),
                   ])),
               Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

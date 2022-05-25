@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -8,6 +7,7 @@ import 'package:ocd/routes/routes.dart';
 import '../../../utils/constrants/colors/colors.dart';
 import '../../widgets/default_Buttom/defalt_buttom.dart';
 
+// ignore: must_be_immutable
 class CourseScreenAfterCompleteCourseRegistration extends StatelessWidget {
   CourseScreenAfterCompleteCourseRegistration({Key? key}) : super(key: key);
   PageController pageController = PageController();
@@ -32,7 +32,7 @@ class CourseScreenAfterCompleteCourseRegistration extends StatelessWidget {
                       },
                       child: Container(
                           alignment: Alignment.topLeft,
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               top: 24, right: 16, left: 16, bottom: 16),
                           child:
                               SvgPicture.asset('assets/icons/back_black.svg')),
@@ -41,36 +41,33 @@ class CourseScreenAfterCompleteCourseRegistration extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               'Learn UI/UX for beginners',
               style: TextStyle(
                   fontSize: 26, fontWeight: FontWeight.w600, color: BLACKTEXT),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Container(
               alignment: Alignment.center,
               width: 158,
               height: 22,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: TEXTFIELDLOGIN),
               child: const Text(
                 'Author: Ahmed Abaza',
                 style: TextStyle(
                     fontSize: 12, fontWeight: FontWeight.w600, color: HINTTEXT),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
+              children: const [
                 Text(
                   ' Session 1',
                 ),
@@ -97,7 +94,7 @@ class CourseScreenAfterCompleteCourseRegistration extends StatelessWidget {
               lineHeight: 3.5,
               nodeSize: 30,
               activeNodeColor: MAINCOLOR,
-              inActiveNodeColor: HINTPROCESS,
+              inActiveNodeColor: Color(0xFFF7F7F7),
               activeLineColor: MAINCOLOR,
               inActiveBorderColor: HINTPROCESS,
               activeBorderColor: MAINCOLOR,
@@ -109,7 +106,7 @@ class CourseScreenAfterCompleteCourseRegistration extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
+              children: const [
                 Text(
                   '4/27',
                 ),
@@ -131,37 +128,40 @@ class CourseScreenAfterCompleteCourseRegistration extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
-              color: Color(0xFFFAFAFA),
+              color: const Color(0xFFFAFAFA),
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Image(
                             image: AssetImage('assets/icons/map.png'),
                             color: null),
                         SizedBox(
                           width: 10,
                         ),
-                        Text(
-                          'Cairo',
-                          style: TextStyle(
-                              color: BLACKTEXT,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500),
+                        Padding(
+                          padding: EdgeInsets.only(left: 5),
+                          child: Text(
+                            'Cairo',
+                            style: TextStyle(
+                                color: BLACKTEXT,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500),
+                          ),
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
-                      children: [
+                      children: const [
                         Image(
                           image: AssetImage('assets/icons/Time.png'),
                           color: null,
@@ -182,10 +182,10 @@ class CourseScreenAfterCompleteCourseRegistration extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Center(
+            const Center(
               child: Text(
                 'Scan your QR Code to take your attendance',
                 style: TextStyle(
@@ -194,7 +194,7 @@ class CourseScreenAfterCompleteCourseRegistration extends StatelessWidget {
                     color: BLACKTEXT),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             SvgPicture.asset(
@@ -202,7 +202,7 @@ class CourseScreenAfterCompleteCourseRegistration extends StatelessWidget {
               width: 120,
               height: 120,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             DefaultButtom(

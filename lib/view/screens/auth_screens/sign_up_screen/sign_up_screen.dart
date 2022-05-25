@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ocd/logic/controllers/auth_controller/auth_controller.dart';
+import 'package:ocd/controllers/auth_controller/auth_controller.dart';
 import 'package:ocd/utils/constrants/colors/colors.dart';
-import 'package:ocd/utils/constrants/my_string.dart';
+import 'package:ocd/utils/constrants/validation_patterns/my_string.dart';
 import 'package:ocd/view/widgets/auth_widgets/container_under.dart';
 import 'package:ocd/view/widgets/auth_widgets/header_auth.dart';
 
@@ -159,7 +159,7 @@ class SignUpScreen extends StatelessWidget {
                       hintText: 'Address',
                       obscureText: false,
                       type: TextInputType.text,
-                      prefixIcon: ImageIcon(
+                      prefixIcon: const ImageIcon(
                         AssetImage("assets/icons/map-pin.png"),
                         color: HINTTEXTFORMFIELD,
                         size: 24,

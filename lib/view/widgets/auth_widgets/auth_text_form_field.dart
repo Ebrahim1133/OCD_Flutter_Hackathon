@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ocd/utils/constrants/colors/colors.dart';
 
+// ignore: must_be_immutable
 class AuthTextFromField extends StatelessWidget {
   final TextEditingController controller;
   final bool obscureText;
@@ -10,6 +11,10 @@ class AuthTextFromField extends StatelessWidget {
   final String hintText;
   final TextInputType type;
   double? padding;
+  Color? formColor;
+  Color? hintColor;
+  Color? borderColor;
+  Color? inputColor;
   AuthTextFromField({
     required this.controller,
     required this.obscureText,
@@ -17,6 +22,10 @@ class AuthTextFromField extends StatelessWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.padding = 0,
+    this.formColor = TEXTFIELDCOLOR,
+    this.hintColor = HINTTEXTFORMFIELD,
+    this.inputColor = Colors.black,
+    this.borderColor = TEXTFIELDCOLOR,
     required this.hintText,
     required this.type,
     Key? key,
@@ -30,35 +39,35 @@ class AuthTextFromField extends StatelessWidget {
       cursorColor: Colors.black,
       keyboardType: type,
       validator: (value) => validator(value),
-      style: const TextStyle(
-        color: Colors.black,
+      style: TextStyle(
+        color: inputColor!,
       ),
       decoration: InputDecoration(
-        fillColor: TEXTFIELDCOLOR,
+        fillColor: formColor,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         contentPadding: EdgeInsets.all(padding!),
         hintText: hintText,
-        hintStyle: const TextStyle(
-          color: HINTTEXTFORMFIELD,
+        hintStyle: TextStyle(
+          color: hintColor,
           fontSize: 16,
           fontWeight: FontWeight.normal,
         ),
         filled: true,
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.white),
+          borderSide: BorderSide(color: borderColor!),
           borderRadius: BorderRadius.circular(10),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.white),
+          borderSide: BorderSide(color: borderColor!),
           borderRadius: BorderRadius.circular(10),
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.white),
+          borderSide: BorderSide(color: borderColor!),
           borderRadius: BorderRadius.circular(10),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.white),
+          borderSide: BorderSide(color: borderColor!),
           borderRadius: BorderRadius.circular(10),
         ),
       ),

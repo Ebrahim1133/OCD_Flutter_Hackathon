@@ -4,12 +4,13 @@ import 'package:get/get.dart';
 import 'package:ocd/view/widgets/auth_widgets/auth_text_form_field.dart';
 import 'package:ocd/view/widgets/default_app_bar/default_app_bar.dart';
 
-import '../../../../../logic/controllers/auth_controller/auth_controller.dart';
+import '../../../../../controllers/auth_controller/auth_controller.dart';
 import '../../../../../utils/constrants/colors/colors.dart';
 import '../../../../widgets/default_Buttom/defalt_buttom.dart';
 
 class ForgotPasswordCreateNewPasswordScreen extends StatelessWidget {
   ForgotPasswordCreateNewPasswordScreen({Key? key}) : super(key: key);
+
   final TextEditingController newPasswordController = TextEditingController();
   final TextEditingController confirmPasswordController =
       TextEditingController();
@@ -23,7 +24,7 @@ class ForgotPasswordCreateNewPasswordScreen extends StatelessWidget {
         appBar: DefaultAppBar(
           title: "Create New Password",
           titleColor: BLACKTEXT,
-          secandicon: Text(
+          secandicon: const Text(
             "",
             style: TextStyle(color: APPBAR),
           ),
@@ -31,8 +32,8 @@ class ForgotPasswordCreateNewPasswordScreen extends StatelessWidget {
             onPressed: () {
               Get.back();
             },
-            icon: Padding(
-              padding: const EdgeInsets.all(22.0),
+            icon: const Padding(
+              padding: EdgeInsets.all(22.0),
               child: Icon(
                 Icons.arrow_back,
                 size: 24,

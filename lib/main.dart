@@ -6,7 +6,6 @@ import 'package:ocd/utils/themes/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await GetStorage.init();
 
   runApp(const MyApp());

@@ -13,31 +13,31 @@ class ProfileScreen extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 AvaterPerson(
                   "assets/icons/you.jpg",
-                  width: 95,
-                  height: 95,
+                  width: 100,
+                  height: 100,
                   borderColor: MAINCOLOR,
-                  borderWidth: 6,
+                  borderWidth: 5,
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
-            Text(
+            const Text(
               'Ahmed Abaza',
               style: TextStyle(
                   fontSize: 26, fontWeight: FontWeight.w600, color: BLACKTEXT),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
@@ -47,21 +47,21 @@ class ProfileScreen extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   color: TEXTFIELDLOGIN),
-              child: Text(
+              child: const Text(
                 'Ahmedabaza@gmail.com',
                 style: TextStyle(
                     fontSize: 12, fontWeight: FontWeight.w600, color: HINTTEXT),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
+              children: const [
                 Padding(
-                  padding: const EdgeInsets.only(left: 30),
+                  padding: EdgeInsets.only(left: 30),
                   child: Text(
                     'My Achievement',
                     style: TextStyle(
@@ -72,13 +72,13 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
             ListView.builder(
               shrinkWrap: true,
               itemBuilder: (context, index) {
-                return CardAchievement();
+                return const CardAchievement();
               },
               itemCount: 2,
             )

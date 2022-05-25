@@ -14,12 +14,12 @@ class ImageDownConcer extends StatelessWidget {
         child: Stack(children: [
           Container(
               child: SvgPicture.asset('assets/images/Rectangle 2664.svg'),
-              margin: EdgeInsets.only(top: 33),
-              padding: EdgeInsets.only(right: 15)),
+              margin: const EdgeInsets.only(top: 33),
+              padding: const EdgeInsets.only(right: 15)),
           Container(
               child: SvgPicture.asset('assets/images/Rectangle 2665.svg'),
-              margin: EdgeInsets.only(top: 43),
-              padding: EdgeInsets.only(right: 15)),
+              margin: const EdgeInsets.only(top: 45),
+              padding: const EdgeInsets.only(right: 15)),
         ]));
   }
 }

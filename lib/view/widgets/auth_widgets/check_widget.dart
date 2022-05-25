@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ocd/logic/controllers/auth_controller/auth_controller.dart';
+import 'package:ocd/controllers/auth_controller/auth_controller.dart';
 import 'package:ocd/utils/constrants/colors/colors.dart';
 
 class CheckWidget extends StatelessWidget {
@@ -29,6 +29,7 @@ class CheckWidget extends StatelessWidget {
                   ? const Icon(
                       Icons.done,
                       color: Colors.black,
+                      size: 20,
                     )
                   : Container(),
             ),
@@ -38,7 +39,7 @@ class CheckWidget extends StatelessWidget {
           ),
           Row(
             children: [
-              Text(
+              const Text(
                 "Do you agree to our",
                 style: TextStyle(
                   fontSize: 16,
@@ -49,7 +50,7 @@ class CheckWidget extends StatelessWidget {
               ),
               TextButton(
                 onPressed: onPressed,
-                child: Text(
+                child: const Text(
                   "Privacy Policy",
                   style: TextStyle(
                     fontSize: 16,

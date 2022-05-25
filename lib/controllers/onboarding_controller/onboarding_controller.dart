@@ -9,10 +9,12 @@ class OnBoardingController extends GetxController {
   var selectedPageIndex = 0.obs;
   var pageController = PageController();
   final GetStorage getStorage = GetStorage();
+
+  /// check to onboareding screen no reopen every time I open the application only the first time the application is installed
   void storeOnboardInfo() {
     getStorage.write("onboard", isViewed);
   }
-
+/// list of onboareding screens 
   List<OnboardingInfoModel> onBoardingPages = [
     OnboardingInfoModel(
         'assets/images/hello.svg',

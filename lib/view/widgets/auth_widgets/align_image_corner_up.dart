@@ -12,8 +12,8 @@ class ImageUpConcer extends StatelessWidget {
           SvgPicture.asset('assets/images/background_login.svg'),
           Container(
               child: SvgPicture.asset('assets/images/back_login2.svg'),
-              margin: EdgeInsets.only(bottom: 7),
-              padding: EdgeInsets.only(left: 15)),
+              margin: const EdgeInsets.only(bottom: 7),
+              padding: const EdgeInsets.only(left: 15)),
         ]));
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// here all colors of app
 const Color APPBACKGROUND = Color(0xffffffff);
 const Color TEXTFIELDCOLOR = Color(0xfff8f8f8);
 const Color BLACKTEXT = Color(0xFF000000);
@@ -25,3 +26,6 @@ const Color BUTTOMDISABLETEXT = Color(0xFF7D7D7D);
 const Color BUTTOMDISABLE = Color(0xFFB7B7B7);
 const Color HINTPROCESS = Color(0xFFCCCCCC);
 const Color PARAGRAPHCER = Color(0xFF8B8B8B);
+const Color HINTCODE = Color(0xFF636363);
+const Color CATGROYICON = Color(0xFFFCFCFC);
+const Color CARDACHIMRNT = Color(0xFFFCFCFC);

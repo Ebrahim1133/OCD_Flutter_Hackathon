@@ -3,11 +3,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:linear_step_indicator/linear_step_indicator.dart';
 
-import '../../../../logic/controllers/interview_controller/InterviewController.dart';
-import '../../../../routes/routes.dart';
-import '../../../../utils/constrants/colors/colors.dart';
-import '../../../widgets/default_Buttom/defalt_buttom.dart';
-import '../../../widgets/default_app_bar/default_app_bar.dart';
+import '../../../controllers/interview_controller/InterviewController.dart';
+import '../../../routes/routes.dart';
+import '../../../utils/constrants/colors/colors.dart';
+import '../../widgets/default_Buttom/defalt_buttom.dart';
+import '../../widgets/default_app_bar/default_app_bar.dart';
 
 class HrInterviewScreen extends StatelessWidget {
   HrInterviewScreen({Key? key}) : super(key: key);
@@ -22,15 +22,15 @@ class HrInterviewScreen extends StatelessWidget {
             appBar: DefaultAppBar(
                 title: controller.title2[controller.selectedPageIndex.value],
                 titleColor: BLACKTEXT,
-                secandicon: Text(
+                secandicon: const Text(
                   "",
                   style: TextStyle(color: APPBAR),
                 ),
-                icon: Icon(Icons.android),
+                icon: const Icon(Icons.android),
                 titleSpacing: -30),
             body: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 FullLinearStepIndicator(
@@ -46,11 +46,11 @@ class HrInterviewScreen extends StatelessWidget {
                   controller: controller.pageController,
                   labels: List<String>.generate(3, (index) {
                     if (index == 0) {
-                      return "Exam";
+                      return "   Exam";
                     } else if (index == 1) {
                       return "HR interview";
                     } else {
-                      return "Result";
+                      return "Result   ";
                     }
                   }),
                   complete: () {
@@ -117,7 +117,7 @@ class HrInterviewScreen extends StatelessWidget {
                                         .courseScreenAfterCompleteCourseRegistration);
                                   },
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 DefaultButtom(

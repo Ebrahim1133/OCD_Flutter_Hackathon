@@ -8,10 +8,12 @@ class CardAchievement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.all(10),
       width: 365.17,
       height: 110.66,
-      decoration:
-          BoxDecoration(color: APPBAR, borderRadius: BorderRadius.circular(10)),
+      decoration: BoxDecoration(
+          color: CARDACHIMRNT, borderRadius: BorderRadius.circular(11)),
       child: Row(
         children: [
           Image.asset(
@@ -19,13 +21,13 @@ class CardAchievement extends StatelessWidget {
             width: 75,
             height: 75,
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: const [
               Text(
                 'Learn UI/UX for beginners',
                 style: TextStyle(
@@ -45,7 +47,7 @@ class CardAchievement extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
         ],
